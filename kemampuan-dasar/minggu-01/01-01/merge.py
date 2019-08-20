@@ -1,33 +1,41 @@
-def mergesort(a):
-    print('memecah',a)
-    n=len(a)
-    if n<2:
-        return a
-    else:
-        mid=n//2
-        left=a[:mid]
-        right=a[mid:]
- 
-        mergesort(left)
-        mergesort(right)
-        i=0
-        j=0
-        k=0
-        while i< len(left) and j<len(right):
-            if left[i]>right[j]:
-                a[k]=left[i]
-                i=i+1
-            else:
-                a[k]=right[j]
-                j=j+1
-            k=k+1
-        while i<len(left):
-            a[k]=left[i]
-            i=i+1
-            k=k+1
-        while j<len(right):
-            a[k]=right[j]
-            j=j+1
-            k=k+1
-    a = [1,5,2,35,7,3,4]
-    print('menggabungkan',a)
+def mergeSort(alist):
+    
+   print("Splitting ", alist)
+
+   if len(alist)>1:
+       mid = len(alist)//2
+       lefthalf = alist[:mid]
+       righthalf = alist[mid:]
+
+       #recursion
+       mergeSort(lefthalf)
+       mergeSort(righthalf)
+
+       i=0
+       j=0
+       k=0
+
+       while i < len(lefthalf) and j < len(righthalf):
+           if lefthalf[i] < righthalf[j]:
+               alist[k]=lefthalf[i]
+               i=i+1
+           else:
+               alist[k]=righthalf[j]
+               j=j+1
+           k=k+1
+
+       while i < len(lefthalf):
+           alist[k]=lefthalf[i]
+           i=i+1
+           k=k+1
+
+       while j < len(righthalf):
+           alist[k]=righthalf[j]
+           j=j+1
+           k=k+1
+
+   print("Merging ", alist)
+
+alist = [1,5,2,35,7,3,4]
+mergeSort(alist)
+print(alist)

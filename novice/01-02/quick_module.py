@@ -15,6 +15,3 @@ def partition(a, start, end):
     a[pindex], a[middle] = a[middle], a[pindex]
     print(a)
     return pindex
- 
-a = [68,90,78,44,34,20,100,56,34,2]
-quickshort(a,0,len(a)-1)

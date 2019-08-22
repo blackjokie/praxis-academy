@@ -5,7 +5,12 @@ from quick_module import quickshort, partition
 # a = [1,5,2,35,7,3,4]
 try:
     a = input("Masukkan angka yang hendak di sort (dipisahkan spasi): ")
-    list  = a.split()
+    list1 = a.split()
+    list = []
+    for x in list1:
+        y = int(x)
+        list.append(y) 
+        
     b = input("Pilih metode sort (bubble, insert, quick, merge, select): ")
 
     if b == "bubble":

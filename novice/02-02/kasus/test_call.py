@@ -9,11 +9,11 @@ import unittest
 agus = PizzaRobot("Agus")
 # menampilkan hasil variabel "agus"
 print(agus)
-#  
+# memasukkan nilai () pada variabel "agus" ke method "kerja" pada class "PizzaRobot"
 agus.kerja()
-# 
+# memasukkan nilai (0.50) pada variabel "agus" ke method "kerja" pada class "PizzaRobot"
 agus.tunjangan(0.50)
-# 
+# menampilkan hasil variabel "agus"
 print(agus)
     
 for kelas in Pegawai, Manajer, Koki, Pelayan, PizzaRobot:

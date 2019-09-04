@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def list():
         # Open database connection
-        db = asu.connect("localhost","blackjokie","12345","movie_rent" )
+        db = asu.connect("<hostname>","<username>","<password>","<db_name>")
         
         # prepare a cursor object using cursor() method
         cursor = db.cursor()

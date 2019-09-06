@@ -12,7 +12,7 @@ def handleFileUpload():
     if 'photo' in request.files:
         photo = request.files['photo']
         if photo.filename != '':            
-            photo.save(os.path.join('/home/blackjokie/Documents/belajar/praxis-academy/novice/03-02/kasus/uploads', photo.filename))
+            photo.save(os.path.join('<upload_dir>', photo.filename))
     return redirect(url_for('fileFrontPage'))
 
 if __name__ == '__main__':

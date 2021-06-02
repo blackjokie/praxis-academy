@@ -18,5 +18,5 @@ promise==2.2.1
 requests==2.22.0
 Rx==1.6.1
 six==1.12.0
-urllib3==1.25.3
+urllib3==1.26.5
 Werkzeug==0.15.6
